@@ -2,40 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  .texto {
-    @apply
-      text-base
-      not-italic
-      font-medium
-      text-slate-600
-    ;
-  }
-
-  .texto-bold {
-    @apply
-      text-black
-    
-    ;
-  }
-}
-
 @layer components {
 
-  .cabecalho {
+  #cabecalho {
     @apply
       mb-10 px-14 py-5
       w-full
       flex justify-between 
       bg-white shadow
+      fixed
     ;
+  }
+
+  #main {
+    @apply pt-32 px-14;
   }
 
   .btn {
     @apply 
       h-12 px-5
       border-2 border-solid rounded-md
-      transition-all duration-500
+      transition-all duration-300
     ;
   }
 
@@ -49,7 +36,7 @@
 
   .btn-blue {
     @apply
-      border-blue-900 hover:border-blue-800 active:border-transparent
+    border-blue-900 hover:border-y-blue-800 active:border-transparent
       bg-transparent hover:bg-blue-200 hover:bg-opacity-80 active:bg-blue-900
       text-blue-900 hover:text-blue-800 active:text-white
     ;

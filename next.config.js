@@ -8,7 +8,7 @@ module.exports = {
                 protocol: "https",
                 hostname: "th.bing.com",
                 port: "",
-                pathname: "/th/id/*"
+                pathname: "/**"
             }
         ]
     }

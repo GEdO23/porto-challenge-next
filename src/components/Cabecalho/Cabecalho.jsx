@@ -9,7 +9,7 @@ export default function Cabecalho() {
 
     if(i) {
         return (
-            <header className="cabecalho">
+            <header id="cabecalho">
                 <button>
                     <Image
                         src={imgLogo}
@@ -28,7 +28,7 @@ export default function Cabecalho() {
         )
     }
     return (
-        <header className="cabecalho">
+        <header id="cabecalho">
             <Image
                 src={imgMenu}
                 alt="Menu"

@@ -5,120 +5,100 @@
         "marca": "Caloi",
         "modelo": "Elite Carbon",
         "numero_serie": "C123456789",
-        "data_compra": "2023-01-15",
+        "data_compra": "15/01/2023",
         "preco_compra": 9999.99,
         "nota_fiscal": "nota_fiscal_1.pdf",
-        "img_src": "https://th.bing.com/th/id/OIP.riBDSiGmd35x-WtgSA6a0gHaE7?pid=ImgDet&w=1600&h=1066&rs=1"
+        "img": "https://th.bing.com/th/id/OIP.riBDSiGmd35x-WtgSA6a0gHaE7?pid=ImgDet&w=1600&h=1066&rs=1"
       },
       {
         "id": 2,
         "marca": "Scott",
         "modelo": "Scale 940",
         "numero_serie": "S987654321",
-        "data_compra": "2023-02-10",
+        "data_compra": "10/02/2023",
         "preco_compra": 7499.90,
         "nota_fiscal": "nota_fiscal_2.pdf",
-        "img_src": ""
+        "img": "https://th.bing.com/th/id/OIP.riBDSiGmd35x-WtgSA6a0gHaE7?pid=ImgDet&w=1600&h=1066&rs=1"
       },
       {
         "id": 3,
         "marca": "Specialized",
         "modelo": "Rockhopper Expert",
         "numero_serie": "S456789123",
-        "data_compra": "2023-03-05",
+        "data_compra": "05/03/2023",
         "preco_compra": 5999.00,
         "nota_fiscal": "nota_fiscal_3.pdf",
-        "img_src": ""
+        "img": "https://th.bing.com/th/id/OIP.riBDSiGmd35x-WtgSA6a0gHaE7?pid=ImgDet&w=1600&h=1066&rs=1"
       },
       {
         "id": 4,
         "marca": "Trek",
         "modelo": "Marlin 7",
         "numero_serie": "T123456789",
-        "data_compra": "2023-04-01",
+        "data_compra": "01/04/2023",
         "preco_compra": 4499.00,
         "nota_fiscal": "nota_fiscal_4.pdf",
-        "img_src": ""
+        "img": "https://th.bing.com/th/id/OIP.riBDSiGmd35x-WtgSA6a0gHaE7?pid=ImgDet&w=1600&h=1066&rs=1"
       },
       {
         "id": 5,
         "marca": "Cannondale",
         "modelo": "Trail SL 1",
         "numero_serie": "C987654321",
-        "data_compra": "2023-04-30",
+        "data_compra": "30/04/2023",
         "preco_compra": 7999.00,
         "nota_fiscal": "nota_fiscal_5.pdf",
-        "img_src": ""
+        "img": "https://th.bing.com/th/id/OIP.riBDSiGmd35x-WtgSA6a0gHaE7?pid=ImgDet&w=1600&h=1066&rs=1"
       },
       {
         "id": 6,
         "marca": "Giant",
         "modelo": "Talon 1",
         "numero_serie": "G456789123",
-        "data_compra": "2023-05-15",
+        "data_compra": "15/05/2023",
         "preco_compra": 5499.00,
         "nota_fiscal": "nota_fiscal_6.pdf",
-        "img_src": ""
+        "img": "https://th.bing.com/th/id/OIP.riBDSiGmd35x-WtgSA6a0gHaE7?pid=ImgDet&w=1600&h=1066&rs=1"
       },
       {
           "id": 7,
           "marca": "Fuji",
           "modelo": "Pulse 1",
           "numero_serie": "F123456789",
-          "data_compra": "2023-06-01",
+          "data_compra": "01/06/2023",
           "preco_compra": 5999.00,
           "nota_fiscal": "nota_fiscal_7.pdf",
-          "img_src": ""
+          "img": "https://th.bing.com/th/id/OIP.riBDSiGmd35x-WtgSA6a0gHaE7?pid=ImgDet&w=1600&h=1066&rs=1"
       },
       {
           "id": 8,
           "marca": "Scott",
           "modelo": "Outlander XTR",
           "numero_serie": "SC123456789",
-          "data_compra": "2023-07-01",
+          "data_compra": "01/07/2023",
           "preco_compra": 5499.00,
           "nota_fiscal": "nota_fiscal_8.pdf",
-          "img_src": ""
+          "img": "https://th.bing.com/th/id/OIP.riBDSiGmd35x-WtgSA6a0gHaE7?pid=ImgDet&w=1600&h=1066&rs=1"
       },
       {
           "id": 9,
           "marca": "Specialized",
           "modelo": "Liv Pro FX 2",
           "numero_serie": "SP123456789",
-          "data_compra": "2023-08-01",
+          "data_compra": "01/08/2023",
           "preco_compra": 5999.00,
           "nota_fiscal": "nota_fiscal_9.pdf",
-          "img_src": ""
+          "img": "https://th.bing.com/th/id/OIP.riBDSiGmd35x-WtgSA6a0gHaE7?pid=ImgDet&w=1600&h=1066&rs=1"
       },
       {
           "id": 10,
           "marca": "Santa Cruz",
           "modelo": "Supernova 3",
           "numero_serie": "SN123456789",
-          "data_compra": "2023-09-01",
+          "data_compra": "01/09/2023",
           "preco_compra": 5499.00,
           "nota_fiscal": "nota_fiscal_10.pdf",
-          "img_src": ""
-      },
-      {
-          "id": 11,
-          "marca": "Santa Cruz",
-          "modelo": "Supernova 3",
-          "numero_serie": "SN123456789",
-          "data_compra": "2023-09-01",
-          "preco_compra": 5499.00,
-          "nota_fiscal": "nota_fiscal_10.pdf",
-          "img_src": ""
-      },
-      {
-          "id": 12,
-          "marca": " Cruz",
-          "modelo": "Supernova 3",
-          "numero_serie": "SN123456789",
-          "data_compra": "2023-09-01",
-          "preco_compra": 5499.00,
-          "nota_fiscal": "nota_fiscal_10.pdf",
-          "img_src": ""
+          "img": "https://th.bing.com/th/id/OIP.riBDSiGmd35x-WtgSA6a0gHaE7?pid=ImgDet&w=1600&h=1066&rs=1"
       }
           
   ]

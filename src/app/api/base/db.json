@@ -9,6 +9,16 @@
       "preco_compra": 9999.99,
       "nota_fiscal": "nota_fiscal_1.pdf",
       "img": ""
+    },
+    {
+      "marca": "",
+      "modelo": "",
+      "numero_serie": "",
+      "data_compra": "",
+      "preco_compra": "",
+      "nota_fiscal": "",
+      "img": "",
+      "id": 2
     }
   ]
 }

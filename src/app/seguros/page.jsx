@@ -1,5 +1,6 @@
 import Image from "next/image";
 import imgIco from "/public/IconeImagem.svg";
+import Link from "next/link";
 
 export default async function SegurosView() {
 
@@ -34,7 +35,10 @@ export default async function SegurosView() {
 
             </div>
             <div className="w-full flex justify-center">
-                <button className="btn btn-blue rounded-full text-2xl">+</button>
+                <Link href="http://localhost:3000/seguros/add">
+                    <button className="btn btn-blue rounded-full text-2xl">+</button>
+                
+                </Link>
 
             </div>
         </div>

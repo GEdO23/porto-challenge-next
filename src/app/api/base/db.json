@@ -19,6 +19,28 @@
       "nota_fiscal": "",
       "img": "",
       "id": 2
+    },
+    {
+      "marca": "Marca 1",
+      "modelo": "Modelo 1",
+      "numero_serie": "c2000000",
+      "data_compra": "2023-11-15",
+      "preco_compra": "",
+      "nota_fiscal": "C:\\fakepath\\ReactAula_7__NEXTJSv7 (2).pdf",
+      "img": "uma_foto_qualquer",
+      "data_preco": "2",
+      "id": 3
+    },
+    {
+      "marca": "Marca 1",
+      "modelo": "Modelo 1",
+      "numero_serie": "c2000000",
+      "data_compra": "2023-11-15",
+      "preco_compra": "",
+      "nota_fiscal": "C:\\fakepath\\ReactAula_7__NEXTJSv7 (2).pdf",
+      "img": "uma_foto_qualquer",
+      "data_preco": "2",
+      "id": 4
     }
   ]
 }

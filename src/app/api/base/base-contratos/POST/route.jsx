@@ -93,9 +93,13 @@ export async function POST(request, response) {
   const lista = await JSON.parse(file);
   const listaContratos = await lista.seguros_bike;
 
-  const newId = await listaContratos[listaContratos.length - 1].id + 1;
+  let newID = 1;
 
-  userRequest.id = await newId;
+  if(listaContratos.length > 0) {
+    newID = await listaContratos[listaContratos.length - 1].id + 1;
+  }
+  
+  userRequest.id = await newID;
 
   await listaContratos.push(userRequest);
 

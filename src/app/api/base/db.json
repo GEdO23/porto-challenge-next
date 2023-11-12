@@ -9,16 +9,6 @@
       "preco_compra": 9999.99,
       "nota_fiscal": "nota_fiscal_1.pdf",
       "img": ""
-    },
-    {
-      "id": 2,
-      "marca": "Scott",
-      "modelo": "Scale 940",
-      "numero_serie": "S987654321",
-      "data_compra": "10/02/2023",
-      "preco_compra": 7499.9,
-      "nota_fiscal": "nota_fiscal_2.pdf",
-      "img": ""
     }
   ]
 }

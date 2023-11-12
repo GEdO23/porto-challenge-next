@@ -3,10 +3,10 @@ import { NextResponse } from "next/server";
 
 export async function GET(request,{params}) {
   // Coletando caminho do banco de dados
-  const caminhoBd = process.cwd() + "/src/app/api/base/db.json";
+  const caminhoDB = process.cwd() + "/src/app/api/base/db.json";
 
   // Armazenando arquivo
-  const file = await fs.readFile(caminhoBd, 'utf8');
+  const file = await fs.readFile(caminhoDB, 'utf8');
 
   // Extraindo a lista de usuários do arquivo JSON:
   const lista = await JSON.parse(file).seguros_bike;

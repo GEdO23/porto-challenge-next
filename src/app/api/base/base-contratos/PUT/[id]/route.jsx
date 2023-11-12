@@ -2,21 +2,26 @@ import { promises as fs } from "fs";
 import { NextResponse } from "next/server";
 
 export async function PUT(request, { params }) {
-  const javaAPIURL = process.cwd() + "/src/app/api/base/db.json";
-  const file = await fs.readFile(javaAPIURL, "utf-8");
+  try {
+    const userRequest = await request.json();
 
-  const lista = await JSON.parse(file);
-  const listaContratos = await lista.seguros_bike;
+    const javaAPIURL = process.cwd() + "/src/app/api/base/db.json";
+    const file = await fs.readFile(javaAPIURL, "utf-8");
 
-  const id = params.id;
+    const lista = await JSON.parse(file);
+    const listaContratos = await lista.seguros_bike;
 
-  if (id > 0 && id <= listaContratos.length) {
-    return NextResponse.json(
-      listaContratos.find((contrato) => contrato.id == id)
-    );
-  } else {
-    return id == 0
-      ? NextResponse.json(listaContratos)
-      : NextResponse.redirect("http://localhost:3000/error");
+    let index = await listaContratos.findIndex((contrato)=> contrato.id == params.id);
+
+    if(index != -1) {
+      listaContratos[index] = await userRequest;
+    }
+
+    await fs.writeFile(javaAPIURL, JSON.stringify(lista));
+
+    return NextResponse.json(lista);
+  
+  } catch(error) {
+    return null;
   }
 }

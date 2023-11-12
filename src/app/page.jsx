@@ -7,6 +7,7 @@ export default function Home() {
       <h1>HOME</h1>
       <h2>Pagina Principal</h2>
       <Link href="/seguros">Contratos Seguro de Bike</Link>
+      
     </main>
     </>
   )

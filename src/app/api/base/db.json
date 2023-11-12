@@ -8,7 +8,7 @@
         "data_compra": "15/01/2023",
         "preco_compra": 9999.99,
         "nota_fiscal": "nota_fiscal_1.pdf",
-        "img": "https://th.bing.com/th/id/OIP.riBDSiGmd35x-WtgSA6a0gHaE7?pid=ImgDet&w=1600&h=1066&rs=1"
+        "img": ""
       },
       {
         "id": 2,
@@ -18,7 +18,7 @@
         "data_compra": "10/02/2023",
         "preco_compra": 7499.90,
         "nota_fiscal": "nota_fiscal_2.pdf",
-        "img": "https://th.bing.com/th/id/OIP.riBDSiGmd35x-WtgSA6a0gHaE7?pid=ImgDet&w=1600&h=1066&rs=1"
+        "img": ""
       },
       {
         "id": 3,
@@ -28,7 +28,7 @@
         "data_compra": "05/03/2023",
         "preco_compra": 5999.00,
         "nota_fiscal": "nota_fiscal_3.pdf",
-        "img": "https://th.bing.com/th/id/OIP.riBDSiGmd35x-WtgSA6a0gHaE7?pid=ImgDet&w=1600&h=1066&rs=1"
+        "img": ""
       },
       {
         "id": 4,
@@ -38,7 +38,7 @@
         "data_compra": "01/04/2023",
         "preco_compra": 4499.00,
         "nota_fiscal": "nota_fiscal_4.pdf",
-        "img": "https://th.bing.com/th/id/OIP.riBDSiGmd35x-WtgSA6a0gHaE7?pid=ImgDet&w=1600&h=1066&rs=1"
+        "img": ""
       },
       {
         "id": 5,
@@ -48,7 +48,7 @@
         "data_compra": "30/04/2023",
         "preco_compra": 7999.00,
         "nota_fiscal": "nota_fiscal_5.pdf",
-        "img": "https://th.bing.com/th/id/OIP.riBDSiGmd35x-WtgSA6a0gHaE7?pid=ImgDet&w=1600&h=1066&rs=1"
+        "img": ""
       },
       {
         "id": 6,
@@ -58,7 +58,7 @@
         "data_compra": "15/05/2023",
         "preco_compra": 5499.00,
         "nota_fiscal": "nota_fiscal_6.pdf",
-        "img": "https://th.bing.com/th/id/OIP.riBDSiGmd35x-WtgSA6a0gHaE7?pid=ImgDet&w=1600&h=1066&rs=1"
+        "img": ""
       },
       {
           "id": 7,
@@ -68,7 +68,7 @@
           "data_compra": "01/06/2023",
           "preco_compra": 5999.00,
           "nota_fiscal": "nota_fiscal_7.pdf",
-          "img": "https://th.bing.com/th/id/OIP.riBDSiGmd35x-WtgSA6a0gHaE7?pid=ImgDet&w=1600&h=1066&rs=1"
+          "img": ""
       },
       {
           "id": 8,
@@ -78,7 +78,7 @@
           "data_compra": "01/07/2023",
           "preco_compra": 5499.00,
           "nota_fiscal": "nota_fiscal_8.pdf",
-          "img": "https://th.bing.com/th/id/OIP.riBDSiGmd35x-WtgSA6a0gHaE7?pid=ImgDet&w=1600&h=1066&rs=1"
+          "img": ""
       },
       {
           "id": 9,
@@ -88,7 +88,7 @@
           "data_compra": "01/08/2023",
           "preco_compra": 5999.00,
           "nota_fiscal": "nota_fiscal_9.pdf",
-          "img": "https://th.bing.com/th/id/OIP.riBDSiGmd35x-WtgSA6a0gHaE7?pid=ImgDet&w=1600&h=1066&rs=1"
+          "img": ""
       },
       {
           "id": 10,
@@ -98,7 +98,7 @@
           "data_compra": "01/09/2023",
           "preco_compra": 5499.00,
           "nota_fiscal": "nota_fiscal_10.pdf",
-          "img": "https://th.bing.com/th/id/OIP.riBDSiGmd35x-WtgSA6a0gHaE7?pid=ImgDet&w=1600&h=1066&rs=1"
+          "img": ""
       }
           
   ]

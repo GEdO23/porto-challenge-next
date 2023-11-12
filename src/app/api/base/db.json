@@ -1,1 +1,14 @@
-{"seguros_bike":[{"id":1,"marca":"Caloi","modelo":"Elite Carbon","numero_serie":"C123456789","data_compra":"15/01/2023","preco_compra":9999.99,"nota_fiscal":"nota_fiscal_1.pdf","img":""}]}
+{
+  "seguros_bike": [
+    {
+      "id": 1,
+      "marca": "Caloi",
+      "modelo": "Elite Carbon",
+      "numero_serie": "C123456789",
+      "data_compra": "15/01/2023",
+      "preco_compra": 9999.99,
+      "nota_fiscal": "nota_fiscal_1.pdf",
+      "img": ""
+    }
+  ]
+}

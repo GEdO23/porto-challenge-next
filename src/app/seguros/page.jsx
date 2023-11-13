@@ -27,7 +27,9 @@ export default async function SegurosView() {
     return (
         <main className="contratos-container">
             <ul className="contratos-lista">
-                {seguros.map((contrato) => (
+                {
+                seguros.length > 0 ? 
+                seguros.map((contrato) => (
                     <li key={contrato.id} className="contrato-item">
                         <div className="item-info">
                             <Image className="item-imagem" width="100" height="50" src={contrato.img ? contrato.img : imgIco} alt="Foto da Bike" />
@@ -43,7 +45,13 @@ export default async function SegurosView() {
                             <button type="button" className="btn btn-red" onClick={()=> handleDelete(contrato.id)}>Cancelar</button>
                         </div>
                     </li>
-                ))}
+                )) :
+                (
+                    <>
+                        <li className="w-full text-center">Nenhum contrato adcionado ainda...</li>
+                        <li className="w-full text-center">Adcionar novo contrato:</li>
+                    </>
+                )}
             </ul>
             <div className="add-button-container">
                 <Link href="http://localhost:3000/seguros/add">

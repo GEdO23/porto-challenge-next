@@ -1,1 +1,44 @@
-{"seguros_bike":[{"marca":"Marca 3","modelo":"Modelo 1","numero_serie":"A12345678","data_compra":"2023-11-13","preco_compra":"1","nota_fiscal":"C:\\fakepath\\node-v21.1.0-x64.msi","img":"","id":1},{"marca":"Marca 1","modelo":"","numero_serie":"","data_compra":"2023-11-13","preco_compra":"0","nota_fiscal":"","img":"","id":2},{"marca":"Andre","modelo":"Marcelo","numero_serie":"1aaw3235235","data_compra":"2023-11-08","preco_compra":"2900.00","nota_fiscal":"C:\\fakepath\\node-v21.1.0-x64.msi","img":"","id":3},{"marca":"fgadsggsdg","modelo":"","numero_serie":"","data_compra":"2023-11-13","preco_compra":"0","nota_fiscal":"","img":"","id":4}]}
+{
+  "seguros_bike": [
+    {
+      "marca": "Marca 3",
+      "modelo": "Modelo 1",
+      "numero_serie": "A12345678",
+      "data_compra": "2023-11-13",
+      "preco_compra": "1",
+      "nota_fiscal": "C:\\fakepath\\node-v21.1.0-x64.msi",
+      "img": "",
+      "id": 1
+    },
+    {
+      "marca": "Marca 1",
+      "modelo": "",
+      "numero_serie": "",
+      "data_compra": "2023-11-13",
+      "preco_compra": "0",
+      "nota_fiscal": "",
+      "img": "",
+      "id": 2
+    },
+    {
+      "marca": "Não é André",
+      "modelo": "Mas é o Marcelo",
+      "numero_serie": "1aaw3235235",
+      "data_compra": "2023-11-08",
+      "preco_compra": "2900.00",
+      "nota_fiscal": "C:\\fakepath\\node-v21.1.0-x64.msi",
+      "img": "",
+      "id": 3
+    },
+    {
+      "marca": "fgadsggsdg",
+      "modelo": "",
+      "numero_serie": "",
+      "data_compra": "2023-11-13",
+      "preco_compra": "0",
+      "nota_fiscal": "",
+      "img": "",
+      "id": 4
+    }
+  ]
+}

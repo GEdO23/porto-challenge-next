@@ -2,26 +2,83 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@layer base {
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  body, main {
+    @apply w-screen h-screen;
+  }
+  .contratos-container {
+    @apply w-max my-0 mx-auto py-32 flex flex-col;
+    
+    & .contratos-lista {
+      @apply w-max mx-auto my-0;
+  
+      & .contrato-item {
+        @apply max-w-screen-xl mb-10 flex items-center justify-between gap-24;
+  
+        & .item-info {
+          @apply flex gap-5;
+  
+          & .item-imagem {
+            @apply rounded-lg;
+          }
+
+          & .text-container {
+            @apply flex flex-col gap-2 text-black;
+
+            & .light-text {
+              @apply text-slate-600;
+            }
+          }
+        }
+  
+        & .button-container {
+          @apply flex gap-5;
+        }
+      }
+    }
+
+    & .add-button-container {
+      @apply w-full flex justify-center;
+    }
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
+@layer components {
+  #cabecalho {
+    @apply mb-10 px-14 py-5
+      w-full
+      flex justify-between 
+      bg-white shadow
+      fixed;
+  }
+
+  #main {
+    @apply pt-32 px-14;
+  }
+
+  .btn {
+    @apply h-12 px-5
+      border-2 border-solid rounded-md
+      transition-all duration-300;
+  }
+
+  .btn-black {
+    @apply border-slate-900 hover:border-slate-800 active:border-slate-900
+      bg-transparent hover:bg-slate-300 hover:bg-opacity-80 active:bg-slate-900
+      text-slate-900 hover:text-slate-800 active:text-slate-200;
+  }
+
+  .btn-blue {
+    @apply border-blue-900 hover:border-y-blue-800 active:border-transparent
+      bg-transparent hover:bg-blue-200 hover:bg-opacity-80 active:bg-blue-900
+      text-blue-900 hover:text-blue-800 active:text-white;
+  }
+
+  .btn-red {
+    @apply border-red-600 hover:border-red-500 active:border-transparent
+      bg-transparent hover:bg-red-200 hover:bg-opacity-80 active:bg-red-600
+      text-red-600 hover:text-red-500 active:text-white;
+  }
 }

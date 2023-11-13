@@ -51,11 +51,11 @@
 
 @layer components {
   #cabecalho {
-    @apply mb-10 px-14 py-5
+    @apply mb-10 px-14 py-2
       w-full
       flex justify-between 
       bg-white shadow
-      fixed
+      fixed z-50
       ;
   }
 

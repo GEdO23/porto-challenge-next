@@ -1,16 +1,17 @@
 "use client";
 
-import Image from "next/image";
-import imgIco from "/public/IconeImagem.svg";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function CadSeguro() {
+    const navigate = useRouter();
+
     const [contrato, setContrato] = useState({
         marca: "",
         modelo: "",
         numero_serie: "",
-        data_compra: "",
-        preco_compra: "",
+        data_compra: "2023-11-13",
+        preco_compra: "0",
         nota_fiscal: "",
         img: "",
     });
@@ -32,6 +33,10 @@ export default function CadSeguro() {
                 },
                 body: JSON.stringify(contrato),
             });
+
+            setTimeout(()=> {
+                navigate.push("/seguros");
+            }, 2000);
         } catch(error) {
             console.log(error);
         }
@@ -98,7 +103,7 @@ export default function CadSeguro() {
                         </div>
                         <div>
                             <label htmlFor="idDtPreco">
-                                Preço:
+                                Preço: R$
                                 <input 
                                 type="number" 
                                 name="preco_compra"

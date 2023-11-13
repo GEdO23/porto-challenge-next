@@ -101,7 +101,7 @@ export default function CadSeguro() {
                                 Preço:
                                 <input 
                                 type="number" 
-                                name="data_preco"
+                                name="preco_compra"
                                 id="idDtPreco"
                                 placeholder="Digite o valor da bike em sua compra."
                                 value={contrato.preco_compra}

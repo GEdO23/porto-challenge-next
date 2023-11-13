@@ -19,7 +19,7 @@
         "desc": "Um novo meio de contratar seguros bike, utilizando inteligência artificial para uma nova experiência!"
       },
       "img": {
-        "src": "#",
+        "src": "/slides/imagemBike.jpg",
         "alt": "Imagem de Fundo"
       }
     },
@@ -30,7 +30,7 @@
         "desc": "Venha ver nosso novo curso gamificado criado especialmente para você! Aprenda mais sobre seguros bike conosco de forma gratuita e eficiente."
       },
       "img": {
-        "src": "#",
+        "src": "/slides/imagemGame.jpg",
         "alt": "Imagem de Fundo"
       }
     },
@@ -41,7 +41,7 @@
         "desc": "Aqui você poderá ver cada membro da equipe que realizou este projeto! Venha conhecer a startup OM. Corp."
       },
       "img": {
-        "src": "#",
+        "src": "/slides/imagemEquipe.jpg",
         "alt": "Imagem de Fundo"
       }
     }

@@ -45,7 +45,7 @@ export default function CadSeguro() {
 
 
     return (
-        <div id="main">
+        <main>
             <h1 className="text-center">Cadastro de Seguro</h1>
             <div>
                 <form onSubmit={handleSubmit}>
@@ -146,6 +146,6 @@ export default function CadSeguro() {
                     </div>
                 </form>
             </div>
-        </div>
+        </main>
     );
 }

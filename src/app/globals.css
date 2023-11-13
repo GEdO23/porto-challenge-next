@@ -4,7 +4,11 @@
 
 @layer base {
 
-  body, main {
+  main {
+    @apply w-screen h-screen py-32 px-14;
+  }
+
+  body {
     @apply w-screen h-screen;
   }
   .contratos-container {
@@ -51,11 +55,8 @@
       w-full
       flex justify-between 
       bg-white shadow
-      fixed;
-  }
-
-  #main {
-    @apply pt-32 px-14;
+      fixed
+      ;
   }
 
   .btn {

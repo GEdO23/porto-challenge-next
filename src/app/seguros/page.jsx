@@ -6,9 +6,8 @@ import Link from "next/link";
 
 // eslint-disable-next-line @next/next/no-async-client-component
 export default async function SegurosView() {
-    const resposta = await fetch(
-        "http://localhost:3000/api/base/base-contratos/GET/0"
-    );
+    
+    const resposta = await fetch("http://localhost:3000/api/base/base-contratos/GET/0");
     const seguros = await resposta.json();
 
     const handleDelete = async (id) => {

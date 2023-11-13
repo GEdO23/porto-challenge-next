@@ -22,7 +22,9 @@ export default function EditContract({ params }) {
     const fetchContrato = async () => {
       try {
         const resposta = await fetch(`/api/base/base-contratos/GET/${id}`);
+        console.log(`Obtendo resposta de fetch com o id ${id}`)
         const data = await resposta.json();
+        console.log(`Resposta JSON: ${data}`)
         setContrato(data);
       } catch (error) {
         console.log(error);
@@ -63,8 +65,8 @@ export default function EditContract({ params }) {
   };
 
   return (
-    <div id="main">
-      <h1 className="text-center">Cadastro de Seguro</h1>
+    <main>
+      <h1 className="text-center">Atualizar Contrato</h1>
       <div>
         <form onSubmit={handleSubmit}>
           <div>
@@ -163,6 +165,6 @@ export default function EditContract({ params }) {
           </div>
         </form>
       </div>
-    </div>
+    </main>
   );
 }

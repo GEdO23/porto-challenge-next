@@ -11,12 +11,12 @@ export async function GET(request, { params }) {
   const id = params.id;
 
   if (id > 0 && id <= listaContratos.length) {
-    return NextResponse.json(
+    return await NextResponse.json(
       listaContratos.find((contrato) => contrato.id == id)
     );
   } else {
     return id == 0
-      ? NextResponse.json(listaContratos)
+      ? await NextResponse.json(listaContratos)
       : NextResponse.redirect("http://localhost:3000/error");
   }
 }

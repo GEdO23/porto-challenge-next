@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Cabecalho() {
     return (
         <header id="cabecalho">
-            <div className="flex items-center w-3/5 justify-between">
+            <div className="flex items-center w-3/5 justify-between max-w-screen-lg">
                 <Link href={'http://localhost:3000'}>
                     <Image
                         src={imgLogo}

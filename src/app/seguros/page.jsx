@@ -1,63 +1,95 @@
-"use client";
-
+// Importando Tags utilizadas na página
 import Image from "next/image";
-import imgIco from "/public/IconeImagem.svg";
 import Link from "next/link";
 
-// eslint-disable-next-line @next/next/no-async-client-component
-export default async function SegurosView() {
-    
-    const resposta = await fetch("http://localhost:3000/api/base/base-contratos/GET/0");
-    const seguros = await resposta.json();
+// Importando Imagem padrão da bike
+import imgIco from "/public/IconeImagem.svg";
 
+// Importando componentes
+import ButtonAdd from "@/components/Button/Add/ButtonAdd";
+import ButtonEdit from "@/components/Button/Edit/ButtonEdit";
+import ButtonRemove from "@/components/Button/Remove/ButtonRemove";
+
+// Página assincrona de visualização de seguros de bike
+export default async function SegurosView() {
+
+    // Solicitando resposta fetch de GET-ALL de base-contratos.
+    const respostaGET = await fetch("http://localhost:3000/api/base/base-contratos/GET/0");
+    
+    // Transformando a resposta fetch em um json que poderá ser utilizado na página.
+    const seguros = await respostaGET.json();
+
+    // Função para lidar com o cancelamento de contratos
     const handleDelete = async (id) => {
         try {
-            const response = await fetch(`http://localhost:3000/api/base/base-contratos/DELETE/${id}`, {
+            // Solicitando a remoção do seguro, cujo ID é o mesmo que o ID chamado na função
+            const respostaDEL = await fetch(`http://localhost:3000/api/base/base-contratos/DELETE/${id}`,
+            {
                 method: "DELETE",
                 headers: {
-                    'Content-Type': 'application/json',
+                    "Content-Type": "application/json",
                 },
-            });
-        } catch(error) {
+            }
+        );
+        } catch (error) {
             console.log(error);
         }
-    }
+    };
 
     return (
-        <main className="contratos-container">
-            <ul className="contratos-lista">
-                {
-                seguros.length > 0 ? 
-                seguros.map((contrato) => (
-                    <li key={contrato.id} className="contrato-item">
-                        <div className="item-info">
-                            <Image className="item-imagem" width="100" height="50" src={contrato.img ? contrato.img : imgIco} alt="Foto da Bike" />
-                            <div className="text-container">
-                                <p>{contrato.marca} - {contrato.modelo} - {contrato.numero_serie}</p>
-                                <p>{contrato.data_compra} - R$ {(Math.round(contrato.preco_compra * 100) / 100).toFixed(2)}</p>
-                                <p className="light-text">{contrato.nota_fiscal}</p>
-                            </div>
-                        </div>
+        <main className="w-max my-0 mx-auto py-32 flex flex-col">
+            {/* Lista de Contratos de Seguro de Bike */}
+            <ul className="w-max mx-auto my-0">
+                {/* Verificando se há Contratos 
+                Se houver, exibir todos, se não, exibir mensagem */}
+                {seguros.length > 0 ? 
+                (await seguros.map((contrato) => (
+                <li key={contrato.id} className="max-w-screen-xl mb-10 flex justify-between gap-24">
+                    {/* Dados da Bike */}
+                    <div className="flex gap-5">
+                        {/* Exibindo imagem da Bike ao usuário 
+                        Caso não tenha sido enviada uma imagem, será exibida a imagem padrão */}
+                        <Image className="rounded-lg"
+                        width="100" height="50"
+                        src={contrato.img ? contrato.img : imgIco} alt="Foto da Bike" 
+                        />
 
-                        <div className="button-container">
-                            <Link href={`http://localhost:3000/seguros/edit/${contrato.id}`}>
-                                <button type="button" className="btn btn-blue">Atualizar</button>
-                            
-                            </Link>
-                            <button type="button" className="btn btn-red" onClick={()=> handleDelete(contrato.id)}>Cancelar</button>
+                        {/* Marca, modelo, número de série, data da compra, valor da compra e nota fiscal */}
+                        <div className="flex flex-col gap-2 text-black">
+                            <p>{contrato.marca} - {contrato.modelo} - {contrato.numero_serie}</p>
+                            <p>{contrato.data_compra} - R${(Math.round(contrato.preco_compra * 100) / 100).toFixed(2)}</p>
+                            <p className="text-slate-600;">{contrato.nota_fiscal}</p>
                         </div>
-                    </li>
-                )) :
-                (
-                    <>
-                        <li className="w-full text-center">Nenhum contrato adcionado ainda...</li>
-                        <li className="w-full text-center">Adcionar novo contrato:</li>
-                    </>
+                    </div>
+
+                    {/* Botões de manipulação de Contrato (Edit, Delete) */}
+                    <div className="flex gap-5">
+                        {/* Caso seja pressionado o botão componente de edição,
+                        o usuário será redirecionado para uma página de edição formulário do contrato selecionado */}
+                        <Link href={`http://localhost:3000/seguros/edit/${contrato.id}`}>
+                            <ButtonEdit />
+                        </Link>
+                        {/* Caso seja pressionado o botão componente de remoção,
+                        chamar função para lidar com o cancelamento do contrato selecionado */}
+                        <ButtonRemove onClick={() => handleDelete(contrato.id)} />
+                    </div>
+                </li>
+                ))
+                ) : (
+                <>
+                {/* Mensagem exibida, caso usuário ainda não tenha contratos */}
+                <li className="w-full text-center">Nenhum contrato encontrado em sua conta...</li>
+                <li className="w-full text-center">Adcionar novo contrato:</li>
+                </>
                 )}
             </ul>
-            <div className="add-button-container">
+
+            {/* Botão componente único para contratar mais um seguro de bike */}
+            <div className="w-full flex justify-center">
+                {/* Caso seja pressionado o botão componente de adição,
+                o usuário será redirecionado a uma página formulário de contratação de seguro de bike */}
                 <Link href="http://localhost:3000/seguros/add">
-                    <button className="btn btn-blue rounded-full text-2xl">+</button>
+                    <ButtonAdd />
                 </Link>
             </div>
         </main>

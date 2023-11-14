@@ -10,7 +10,9 @@ export default async function Home() {
 
   return (
     <div className="pt-14">
-      <Slider slides={slides} />;
+      {
+        await slides ? <Slider slides={slides} /> : <p>Carregando...</p>
+      }
 
     </div>
   )

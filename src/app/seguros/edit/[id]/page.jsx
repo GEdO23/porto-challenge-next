@@ -25,7 +25,7 @@ export default function EditContract({ params }) {
         console.log(`Obtendo resposta de fetch com o id ${id}`)
         const data = await resposta.json();
         console.log(`Resposta JSON: ${data}`)
-        setContrato(data);
+        await setContrato(data);
       } catch (error) {
         console.log(error);
       }

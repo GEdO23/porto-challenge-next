@@ -14,12 +14,12 @@ export default async function TeamView() {
 
                 <div>
                     <ul className="flex flex-col p-[50px] pt-[30px] gap-[25px] rounded-[5px] bg-white min-w-[360px]">
-                        {participantes.map((membro)=> (
+                        {await participantes ? participantes.map((membro)=> (
                             <li key={membro.id} className="flex flex-col items-start gap-[10px] self-stretch">
                                 <p className="self-stretch text-black text-[12.5px] opacity-80">{membro.rm}</p>
                                 <h2 className="self-stretch text-black text-[16px] font-bold">{membro.nome}</h2>
                             </li>   
-                        ))}
+                        )) : <p>Carregando...</p>}
                     </ul>
 
                 </div>

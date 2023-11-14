@@ -42,7 +42,7 @@ export default async function SegurosView() {
             <ul className="w-max mx-auto my-0">
                 {/* Verificando se há Contratos 
                 Se houver, exibir todos, se não, exibir mensagem */}
-                {seguros.length > 0 ? 
+                {await seguros.length > 0 && await seguros? 
                 (await seguros.map((contrato) => (
                 <li key={contrato.id} className="max-w-screen-xl mb-10 flex justify-between gap-24">
                     {/* Dados da Bike */}

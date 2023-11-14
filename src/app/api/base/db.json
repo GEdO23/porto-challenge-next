@@ -87,5 +87,37 @@
                 "text": "Conhecer Equipe"
             }
         }
+    ],
+    "equipeOMCORP": [
+        {
+            "id": 1,
+            "rm": "RM551575",
+            "nome": "André Sant'ana"
+        },
+        {
+            "id": 2,
+            "rm": "RM99632",
+            "nome": "Gabriel Eringer de Oliveira"
+        },
+        {
+            "id": 3,
+            "rm": "RM99697",
+            "nome": "Matheus Augusto Leite"
+        },
+        {
+            "id": 4,
+            "rm": "RM98251",
+            "nome": "Marcelo Hespanhol Dias"
+        },
+        {
+            "id": 5,
+            "rm": "RM551428",
+            "nome": "Eduardo Tatsuo"
+        },
+        {
+            "id": 6,
+            "rm": "RM551616",
+            "nome": "Yago Marques"
+        }
     ]
 }

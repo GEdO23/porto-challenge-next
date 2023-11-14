@@ -1,5 +1,4 @@
 import imgLogo from "/public/LogoPorto.svg";
-import imgMenu from "/public/IconeMenu.svg";
 import imgPerfil from "/public/IconePerfil.svg";
 import Image from "next/image";
 import Link from "next/link";

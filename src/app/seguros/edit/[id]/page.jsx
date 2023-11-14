@@ -46,7 +46,7 @@ export default function EditContract({ params }) {
 
     try {
       const response = await fetch(
-        `http://localhost:3000/api/base/base-contratos/PUT/${id}`,
+        `http://127.0.0.1:3000/api/base/base-contratos/PUT/${id}`,
         {
           method: "PUT",
           headers: {

@@ -17,6 +17,6 @@ export async function GET(request, { params }) {
   } else {
     return id == 0
       ? await NextResponse.json(listaContratos)
-      : NextResponse.redirect("http://localhost:3000/error");
+      : NextResponse.redirect("http://127.0.0.1:3000/error");
   }
 }

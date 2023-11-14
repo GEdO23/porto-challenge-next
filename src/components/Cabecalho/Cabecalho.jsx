@@ -7,7 +7,7 @@ export default function Cabecalho() {
     return (
         <header id="cabecalho">
             <div className="flex items-center w-3/5 justify-between max-w-screen-lg">
-                <Link href={'http://localhost:3000'}>
+                <Link href={'http://127.0.0.1:3000'}>
                     <Image
                         src={imgLogo}
                         alt="Menu"
@@ -15,9 +15,9 @@ export default function Cabecalho() {
                         height="25"
                     />
                 </Link>
-                <Link href={'http://localhost:3000/seguros'}>Seguros</Link>
-                <Link href={'http://localhost:3000/gamificacao'}>Gamificação</Link>
-                <Link href={'http://localhost:3000/team'}>Equipe</Link>
+                <Link href={'http://127.0.0.1:3000/seguros'}>Seguros</Link>
+                <Link href={'http://127.0.0.1:3000/gamificacao'}>Gamificação</Link>
+                <Link href={'http://127.0.0.1:3000/team'}>Equipe</Link>
 
             </div>
             <Image

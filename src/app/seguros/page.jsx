@@ -6,9 +6,8 @@ import Link from "next/link";
 
 // eslint-disable-next-line @next/next/no-async-client-component
 export default async function SegurosView() {
-    const resposta = await fetch(
-        "http://localhost:3000/api/base/base-contratos/GET/0"
-    );
+    
+    const resposta = await fetch("http://localhost:3000/api/base/base-contratos/GET/0");
     const seguros = await resposta.json();
 
     const handleDelete = async (id) => {
@@ -41,7 +40,10 @@ export default async function SegurosView() {
                         </div>
 
                         <div className="button-container">
-                            <button type="button" className="btn btn-blue">Atualizar</button>
+                            <Link href={`http://localhost:3000/seguros/edit/${contrato.id}`}>
+                                <button type="button" className="btn btn-blue">Atualizar</button>
+                            
+                            </Link>
                             <button type="button" className="btn btn-red" onClick={()=> handleDelete(contrato.id)}>Cancelar</button>
                         </div>
                     </li>

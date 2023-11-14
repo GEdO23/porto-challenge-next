@@ -4,7 +4,11 @@
 
 @layer base {
 
-  body, main {
+  main {
+    @apply w-screen h-screen py-32 px-14;
+  }
+
+  body {
     @apply w-screen h-screen;
   }
   .contratos-container {
@@ -47,15 +51,12 @@
 
 @layer components {
   #cabecalho {
-    @apply mb-10 px-14 py-5
+    @apply mb-10 px-14 py-2
       w-full
       flex justify-between 
       bg-white shadow
-      fixed;
-  }
-
-  #main {
-    @apply pt-32 px-14;
+      fixed z-50
+      ;
   }
 
   .btn {
@@ -64,6 +65,11 @@
       transition-all duration-300;
   }
 
+  .btn-white {
+    @apply border-slate-100 hover:border-slate-200 active:border-slate-100
+      bg-transparent hover:bg-slate-100 hover:bg-opacity-80 active:bg-slate-100
+      text-slate-100 hover:text-slate-600 active:text-slate-800;
+  }
   .btn-black {
     @apply border-slate-900 hover:border-slate-800 active:border-slate-900
       bg-transparent hover:bg-slate-300 hover:bg-opacity-80 active:bg-slate-900

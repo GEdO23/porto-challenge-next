@@ -73,19 +73,22 @@ export default function Home() {
 
   return (
     <>
-      <div className="pt-16">
+      <div className="pt-14">
         <div className="max-w-screen-xl h-[620px] w-full m-auto relative group">
           {/* Imagem */}
           <div
             style={{ backgroundImage: `url(${slider[currentIndex].img.src})` }}
             className=" w-full h-full rounded-2xl bg-center bg-cover duration-500"
           >
-            <div className="w-full h-full flex flex-col top-[10%] -translate-y-[-10%] left-[5%] -translate-x-[-5%] gap-5">
+            <div className="flex flex-col top-[10%] -translate-y-[-10%] left-[5%] -translate-x-[-5%] gap-5">
               <h2 className=" text-white text-4xl">{slider[currentIndex].info.tit}</h2>
               <p className=" text-white text-md opacity-75 w-3/5">{slider[currentIndex].info.desc}</p>
-              <Link href={slider[currentIndex].url.href}>
-                <button className="btn btn-white">{slider[currentIndex].url.text}</button>
-              </Link>
+              <div>
+                <Link href={slider[currentIndex].url.href}>
+                  <button className="btn btn-white">{slider[currentIndex].url.text}</button>
+                </Link>
+
+              </div>
 
             </div>
           </div>
@@ -102,31 +105,6 @@ export default function Home() {
 
         </div>
       </div>
-
-      {/* <h1 className=" text-4xl">HOME</h1>
-      <h2 className=" text-2xl">Pagina Principal</h2>
-      <Link href="/seguros" className=" text-blue-600 underline">Contratos Seguro de Bike</Link>
-
-
-      <h2 className=" text-2xl">Imagens</h2>
-      <ul>
-        {
-          slider.map((slide)=> (
-            <li key={slide.id}>
-              <Image
-                src={slide.img.src}
-                alt={slide.img.alt}
-                layout="fill"
-                objectFit="cover"
-                className=" -z-10"
-              />
-              <h3 className=" text-red-600 text-xl">{slide.info.tit}</h3>
-              <p>{slide.info.desc}</p>
-
-            </li>
-          ))
-        }
-      </ul> */}
     </>
   );
 }

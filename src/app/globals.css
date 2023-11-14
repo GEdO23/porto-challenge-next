@@ -11,41 +11,6 @@
   body {
     @apply w-screen h-screen;
   }
-  .contratos-container {
-    @apply w-max my-0 mx-auto py-32 flex flex-col;
-    
-    & .contratos-lista {
-      @apply w-max mx-auto my-0;
-  
-      & .contrato-item {
-        @apply max-w-screen-xl mb-10 flex items-center justify-between gap-24;
-  
-        & .item-info {
-          @apply flex gap-5;
-  
-          & .item-imagem {
-            @apply rounded-lg;
-          }
-
-          & .text-container {
-            @apply flex flex-col gap-2 text-black;
-
-            & .light-text {
-              @apply text-slate-600;
-            }
-          }
-        }
-  
-        & .button-container {
-          @apply flex gap-5;
-        }
-      }
-    }
-
-    & .add-button-container {
-      @apply w-full flex justify-center;
-    }
-  }
 }
 
 

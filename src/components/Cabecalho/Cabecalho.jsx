@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Cabecalho() {
     return (
-        <header id="cabecalho">
+        <header className="mb-10 px-14 py-2 w-full flex justify-between bg-white shadow fixed z-50">
             <div className="flex items-center w-3/5 justify-between max-w-screen-lg">
                 <Link href={'http://127.0.0.1:3000'}>
                     <Image

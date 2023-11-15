@@ -33,7 +33,7 @@ export default function Slider({slides}) {
               <p className=" text-white text-md opacity-75 w-3/5">{slides[currentIndex].info.desc}</p>
               <div>
                 <Link href={slides[currentIndex].url.href}>
-                  <button className="btn btn-white">{slides[currentIndex].url.text}</button>
+                  <button className="btn-white">{slides[currentIndex].url.text}</button>
                 </Link>
 
               </div>

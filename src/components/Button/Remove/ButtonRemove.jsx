@@ -1,7 +1,7 @@
-import { AiOutlineDelete } from "react-icons/ai";
+import { VscTrash } from "react-icons/vsc";
 
 export default function ButtonRemove() {
     return (
-        <AiOutlineDelete className="buttonremove" />
+        <VscTrash className="buttonremove" />
     );
 }

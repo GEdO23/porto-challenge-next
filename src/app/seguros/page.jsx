@@ -14,7 +14,7 @@ import ButtonRemove from "@/components/Button/Remove/ButtonRemove";
 export default async function SegurosView() {
 
     // Solicitando resposta fetch de GET-ALL de base-contratos.
-    const respostaGET = await fetch("http://127.0.0.1:3000/api/base/base-contratos/GET/0");
+    const respostaGET = await fetch("http://localhost:3000/api/base/base-contratos/GET/0");
     
     // Transformando a resposta fetch em um json que poderá ser utilizado na página.
     const seguros = await respostaGET.json();
@@ -23,7 +23,7 @@ export default async function SegurosView() {
     const handleDelete = async (id) => {
         try {
             // Solicitando a remoção do seguro, cujo ID é o mesmo que o ID chamado na função
-            const respostaDEL = await fetch(`http://127.0.0.1:3000/api/base/base-contratos/DELETE/${id}`,
+            const respostaDEL = await fetch(`http://localhost:3000/api/base/base-contratos/DELETE/${id}`,
             {
                 method: "DELETE",
                 headers: {

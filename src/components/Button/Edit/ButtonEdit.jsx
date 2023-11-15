@@ -1,7 +1,7 @@
-import { AiOutlineEdit } from "react-icons/ai";
+import { VscEdit } from "react-icons/vsc";
 
 export default function ButtonEdit() {
     return (
-        <AiOutlineEdit className="buttonedit" />
+        <VscEdit className="buttonedit" />
     );
 }

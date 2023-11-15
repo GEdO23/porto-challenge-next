@@ -1,7 +1,7 @@
-import { AiOutlineFileAdd } from "react-icons/ai";
+import { VscAdd } from "react-icons/vsc";
 
 export default function ButtonAdd() {
     return (
-        <AiOutlineFileAdd className="buttonadd" />
+        <VscAdd className="buttonadd" />
     );
 }

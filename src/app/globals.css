@@ -103,7 +103,7 @@
 
 @layer components {
   .buttonadd {
-    @apply rounded-full text-2xl fill-blue-600 w-[50px] h-[50px];
+    @apply rounded-full text-2xl fill-blue-600 w-[50px] h-[50px] p-[10px] bg-black/10 flex items-center justify-center cursor-pointer;
   }
 
   .buttonedit {

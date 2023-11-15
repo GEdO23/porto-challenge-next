@@ -5,12 +5,12 @@ import Link from "next/link";
 
 export default function Cabecalho() {
     return (
-        <header className="mb-10 px-14 py-2 w-full flex justify-between bg-white shadow fixed z-50">
-            <div className="flex items-center w-3/5 justify-between max-w-screen-lg">
+        <header className="cabecalho-container">
+            <div className="cabecalho-links">
                 <Link href={'http://127.0.0.1:3000'}>
                     <Image
                         src={imgLogo}
-                        alt="Menu"
+                        alt="Porto"
                         width="100"
                         height="25"
                     />
@@ -22,7 +22,7 @@ export default function Cabecalho() {
             </div>
             <Image
                 src={imgPerfil}
-                alt="Menu"
+                alt="Usuário"
                 width="35"
                 height="35"
             />

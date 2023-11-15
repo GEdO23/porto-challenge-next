@@ -45,8 +45,8 @@ export default function CadSeguro() {
 
 
     return (
-        <main>
-            <h1 className="text-center">Cadastro de Seguro</h1>
+        <main className="segurosadd-container">
+            <h1 className="segurosadd-tit">Cadastro de Seguro</h1>
             <div>
                 <form onSubmit={handleSubmit}>
                     <div>

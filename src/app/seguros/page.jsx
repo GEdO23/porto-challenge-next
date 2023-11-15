@@ -37,16 +37,16 @@ export default async function SegurosView() {
     };
 
     return (
-        <main className="w-max my-0 mx-auto py-32 flex flex-col">
+        <main className="segurosview-container">
             {/* Lista de Contratos de Seguro de Bike */}
-            <ul className="w-max mx-auto my-0">
+            <ul className="segurosview-list">
                 {/* Verificando se há Contratos 
                 Se houver, exibir todos, se não, exibir mensagem */}
                 {await seguros.length > 0 && await seguros? 
                 (await seguros.map((contrato) => (
-                <li key={contrato.id} className="max-w-screen-xl mb-10 flex justify-between gap-24">
+                <li key={contrato.id} className="segurosview-list-item">
                     {/* Dados da Bike */}
-                    <div className="flex gap-5">
+                    <div className="segurosview-list-item-dados">
                         {/* Exibindo imagem da Bike ao usuário 
                         Caso não tenha sido enviada uma imagem, será exibida a imagem padrão */}
                         <Image className="rounded-lg"
@@ -55,15 +55,15 @@ export default async function SegurosView() {
                         />
 
                         {/* Marca, modelo, número de série, data da compra, valor da compra e nota fiscal */}
-                        <div className="flex flex-col gap-2 text-black">
+                        <div className="segurosview-list-item-dados-text">
                             <p>{contrato.marca} - {contrato.modelo} - {contrato.numero_serie}</p>
                             <p>{contrato.data_compra} - R${(Math.round(contrato.preco_compra * 100) / 100).toFixed(2)}</p>
-                            <p className="text-slate-600;">{contrato.nota_fiscal}</p>
+                            <p className="text-slate-600">{contrato.nota_fiscal}</p>
                         </div>
                     </div>
 
                     {/* Botões de manipulação de Contrato (Edit, Delete) */}
-                    <div className="flex gap-5">
+                    <div className="segurosview-list-item-buttons">
                         {/* Caso seja pressionado o botão componente de edição,
                         o usuário será redirecionado para uma página de edição formulário do contrato selecionado */}
                         <Link href={`http://localhost:3000/seguros/edit/${contrato.id}`}>
@@ -85,7 +85,7 @@ export default async function SegurosView() {
             </ul>
 
             {/* Botão componente único para contratar mais um seguro de bike */}
-            <div className="w-full flex justify-center">
+            <div className="segurosview-addbutton-container">
                 {/* Caso seja pressionado o botão componente de adição,
                 o usuário será redirecionado a uma página formulário de contratação de seguro de bike */}
                 <Link href="http://localhost:3000/seguros/add">

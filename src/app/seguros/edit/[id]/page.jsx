@@ -65,8 +65,8 @@ export default function EditContract({ params }) {
   };
 
   return (
-    <main>
-      <h1 className="text-center">Atualizar Contrato</h1>
+    <main className="segurosedit-container">
+      <h1 className="segurosedit-tit">Atualizar Contrato</h1>
       <div>
         <form onSubmit={handleSubmit}>
           <div>

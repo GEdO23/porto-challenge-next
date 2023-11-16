@@ -59,9 +59,9 @@ export default function SegurosView() {
 
                         {/* Marca, modelo, número de série, data da compra, valor da compra e nota fiscal */}
                         <div className="segurosview-list-item-dados-text">
-                            <p>{contrato.marca} - {contrato.modelo} - {contrato.numero_serie}</p>
-                            <p>{contrato.data_compra} - R${(Math.round(contrato.preco_compra * 100) / 100).toFixed(2)}</p>
-                            <p className="text-slate-600">{contrato.nota_fiscal}</p>
+                            <p>{contrato.marca} - {contrato.modelo} - {contrato.numeroSerie}</p>
+                            <p>{contrato.dataCompra} - R${(Math.round(contrato.precoCompra * 100) / 100).toFixed(2)}</p>
+                            <p className="text-slate-600">{contrato.notaFiscal}</p>
                         </div>
                     </div>
 

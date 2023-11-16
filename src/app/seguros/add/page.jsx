@@ -9,10 +9,10 @@ export default function CadSeguro() {
     const [contrato, setContrato] = useState({
         marca: "",
         modelo: "",
-        numero_serie: "",
-        data_compra: "2023-11-13",
-        preco_compra: "0",
-        nota_fiscal: "",
+        numeroSerie: "",
+        dataCompra: "2023-11-13",
+        precoCompra: "0",
+        notaFiscal: "",
         img: "",
     });
 
@@ -81,10 +81,10 @@ export default function CadSeguro() {
                     Número de Série:
                     <input
                         type="text"
-                        name="numero_serie"
+                        name="numeroSerie"
                         id="idNumserie"
                         placeholder="Digite o número de série de sua bike."
-                        value={contrato.numero_serie}
+                        value={contrato.numeroSerie}
                         onChange={handleChange}
                     />
                     </label>
@@ -94,9 +94,9 @@ export default function CadSeguro() {
                     Data da Compra:
                     <input
                         type="date"
-                        name="data_compra"
+                        name="dataCompra"
                         id="idDtCompra"
-                        value={contrato.data_compra}
+                        value={contrato.dataCompra}
                         onChange={handleChange}
                     />
                     </label>
@@ -106,10 +106,10 @@ export default function CadSeguro() {
                     Preço: R$
                     <input
                         type="number"
-                        name="preco_compra"
+                        name="precoCompra"
                         id="idDtPreco"
                         placeholder="Digite o valor da bike em sua compra."
-                        value={contrato.preco_compra}
+                        value={contrato.precoCompra}
                         onChange={handleChange}
                     />
                     </label>
@@ -119,10 +119,10 @@ export default function CadSeguro() {
                     Nota Fiscal:
                     <input
                         type="file"
-                        name="nota_fiscal"
+                        name="notaFiscal"
                         id="idNotafiscal"
                         placeholder="Selecione a nota fiscal de sua bike."
-                        value={contrato.nota_fiscal}
+                        value={contrato.notaFiscal}
                         onChange={handleChange}
                     />
                     </label>

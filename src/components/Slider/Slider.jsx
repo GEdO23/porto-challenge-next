@@ -22,18 +22,18 @@ export default function Slider({slides}) {
 
   return (
     <>
-        <div className="max-w-screen-xl h-[620px] w-full m-auto relative group">
+        <div className="slider-container group">
           {/* Imagem */}
           <div
             style={{ backgroundImage: `url(${slides[currentIndex].img.src})` }}
-            className="w-full h-full rounded-2xl bg-center bg-cover duration-500"
+            className="slider-background"
           >
-            <div className="flex flex-col top-[10%] -translate-y-[-10%] left-[5%] -translate-x-[-5%] gap-5">
-              <h2 className=" text-white text-4xl">{slides[currentIndex].info.tit}</h2>
-              <p className=" text-white text-md opacity-75 w-3/5">{slides[currentIndex].info.desc}</p>
+            <div className="slider-background-dados">
+              <h2 className="slider-background-dados-tit">{slides[currentIndex].info.tit}</h2>
+              <p className="slider-background-dados-desc">{slides[currentIndex].info.desc}</p>
               <div>
                 <Link href={slides[currentIndex].url.href}>
-                  <button className="btn btn-white">{slides[currentIndex].url.text}</button>
+                  <button className="btn-white">{slides[currentIndex].url.text}</button>
                 </Link>
 
               </div>
@@ -42,12 +42,12 @@ export default function Slider({slides}) {
           </div>
 
           {/* Left Arrow */}
-          <div className="hidden group-hover:block absolute top-[40%] -translate-x-0 -translate-y-[-50%] left-5 text-2xl text-white p-2 bg-black/20 rounded-full cursor-pointer">
+          <div className="left-arrow group-hover:block ">
             <LeftArrow onClick={prevSlide} size={30} />
           </div>
 
           {/* Right Arrow */}
-          <div className="hidden group-hover:block absolute top-[40%] -translate-x-0 -translate-y-[-50%] right-5 text-2xl text-white p-2 bg-black/20 rounded-full cursor-pointer">
+          <div className="right-arrow group-hover:block ">
             <RightArrow onClick={nextSlide} size={30} />
           </div>
 

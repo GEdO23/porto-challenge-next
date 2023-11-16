@@ -4,6 +4,8 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 
+const SERVER_URL = process.env.SERVER_URL;
+
 export default function EditContract({ params }) {
   const navigation = useRouter();
   const id = params.id;
@@ -11,10 +13,10 @@ export default function EditContract({ params }) {
   const [contrato, setContrato] = useState({
     marca: "",
     modelo: "",
-    numero_serie: "",
-    data_compra: "",
-    preco_compra: "0",
-    nota_fiscal: "",
+    numeroSerie: "",
+    dataCompra: "",
+    precoCompra: "0",
+    notaFiscal: "",
     img: "",
   });
 
@@ -46,7 +48,7 @@ export default function EditContract({ params }) {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:3000/api/base/base-contratos/PUT/${id}`,
+        `/api/base/base-contratos/PUT/${id}`,
         {
           method: "PUT",
           headers: {
@@ -65,8 +67,8 @@ export default function EditContract({ params }) {
   };
 
   return (
-    <main>
-      <h1 className="text-center">Atualizar Contrato</h1>
+    <main className="segurosedit-container">
+      <h1 className="segurosedit-tit">Atualizar Contrato</h1>
       <div>
         <form onSubmit={handleSubmit}>
           <div>
@@ -101,10 +103,10 @@ export default function EditContract({ params }) {
                 Número de Série:
                 <input
                   type="text"
-                  name="numero_serie"
+                  name="numeroSerie"
                   id="idNumserie"
                   placeholder="Digite o número de série de sua bike."
-                  value={contrato.numero_serie}
+                  value={contrato.numeroSerie}
                   onChange={handleChange}
                 />
               </label>
@@ -114,9 +116,9 @@ export default function EditContract({ params }) {
                 Data da Compra:
                 <input
                   type="date"
-                  name="data_compra"
+                  name="dataCompra"
                   id="idDtCompra"
-                  value={contrato.data_compra}
+                  value={contrato.dataCompra}
                   onChange={handleChange}
                 />
               </label>
@@ -126,10 +128,10 @@ export default function EditContract({ params }) {
                 Preço: R$
                 <input
                   type="number"
-                  name="preco_compra"
+                  name="precoCompra"
                   id="idDtPreco"
                   placeholder="Digite o valor da bike em sua compra."
-                  value={contrato.preco_compra}
+                  value={contrato.precoCompra}
                   onChange={handleChange}
                 />
               </label>
@@ -139,7 +141,7 @@ export default function EditContract({ params }) {
                 Nota Fiscal:
                 <input
                   type="file"
-                  name="nota_fiscal"
+                  name="notaFiscal"
                   id="idNotafiscal"
                   placeholder="Selecione a nota fiscal de sua bike."
                   onChange={handleChange}

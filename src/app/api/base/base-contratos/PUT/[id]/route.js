@@ -1,27 +1,22 @@
-import { promises as fs } from "fs";
 import { NextResponse } from "next/server";
 
 export async function PUT(request, { params }) {
-  try {
-    const userRequest = await request.json();
+  const userRequest = await request.json();
+  const id = params.id; // O ID da bicicleta é passado como um parâmetro de rota
+  const URL = `http://localhost:8080/portoapi/webapi/bicicletas/${id}`;
 
-    const javaAPIURL = process.cwd() + "/src/app/api/base/db.json";
-    const file = await fs.readFile(javaAPIURL, "utf-8");
-
-    const lista = await JSON.parse(file);
-    const listaContratos = await lista.seguros_bike;
-
-    let index = await listaContratos.findIndex((contrato)=> contrato.id == params.id);
-
-    if(index != -1) {
-      listaContratos[index] = await userRequest;
-    }
-
-    await fs.writeFile(javaAPIURL, JSON.stringify(lista));
-
-    return NextResponse.json(lista);
-  
-  } catch(error) {
-    return null;
+  const updateContrato = async ()=> {
+    const response = await fetch(URL, {
+      method: 'PUT',
+      body: JSON.stringify(userRequest),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    return response.ok; // Retorna true se a resposta for bem-sucedida, false caso contrário
   }
+
+  const success = await updateContrato();
+
+  return NextResponse.json({ success }); 
 }

@@ -5,24 +5,24 @@ import Link from "next/link";
 
 export default function Cabecalho() {
     return (
-        <header id="cabecalho">
-            <div className="flex items-center w-3/5 justify-between max-w-screen-lg">
-                <Link href={'http://127.0.0.1:3000'}>
+        <header className="cabecalho-container">
+            <div className="cabecalho-links">
+                <Link href={'http://localhost:3000'}>
                     <Image
                         src={imgLogo}
-                        alt="Menu"
+                        alt="Porto"
                         width="100"
                         height="25"
                     />
                 </Link>
-                <Link href={'http://127.0.0.1:3000/seguros'}>Seguros</Link>
-                <Link href={'http://127.0.0.1:3000/gamificacao'}>Gamificação</Link>
-                <Link href={'http://127.0.0.1:3000/team'}>Equipe</Link>
+                <Link href={'http://localhost:3000/seguros'}>Seguros</Link>
+                <Link href={'http://localhost:3000/gamificacao'}>Gamificação</Link>
+                <Link href={'http://localhost:3000/team'}>Equipe</Link>
 
             </div>
             <Image
                 src={imgPerfil}
-                alt="Menu"
+                alt="Usuário"
                 width="35"
                 height="35"
             />

@@ -7,11 +7,13 @@ import ButtonAdd from "@/components/Button/Add/ButtonAdd";
 import ButtonEdit from "@/components/Button/Edit/ButtonEdit";
 import ButtonRemove from "@/components/Button/Remove/ButtonRemove";
 
+const SERVER_URL = process.env.SERVER_URL;
+
 export default function SegurosView() {
   const [seguros, setSeguros] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/base/base-contratos/GET/0")
+    fetch(`/api/base/base-contratos/GET/0`)
       .then(response => {
         if (!response.ok) {
           throw new Error("Erro ao buscar contratos");
@@ -24,7 +26,7 @@ export default function SegurosView() {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`http://localhost:3000/api/base/base-contratos/DELETE/${id}`, {
+      const response = await fetch(`/api/base/base-contratos/DELETE/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

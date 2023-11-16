@@ -3,6 +3,8 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
+const SERVER_URL = process.env.SERVER_URL;
+
 export default function CadSeguro() {
     const navigate = useRouter();
 
@@ -27,7 +29,7 @@ export default function CadSeguro() {
 
         try {
         const response = await fetch(
-            "http://localhost:3000/api/base/base-contratos/POST",
+            `/api/base/base-contratos/POST`,
             {
             method: "POST",
             headers: {

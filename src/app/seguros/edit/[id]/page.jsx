@@ -4,6 +4,8 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 
+const SERVER_URL = process.env.SERVER_URL;
+
 export default function EditContract({ params }) {
   const navigation = useRouter();
   const id = params.id;
@@ -46,7 +48,7 @@ export default function EditContract({ params }) {
 
     try {
       const response = await fetch(
-        `http://localhost:3000/api/base/base-contratos/PUT/${id}`,
+        `/api/base/base-contratos/PUT/${id}`,
         {
           method: "PUT",
           headers: {

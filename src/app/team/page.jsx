@@ -1,9 +1,9 @@
-const SERVER_URL = process.env.SERVER_URL;
+
 
 export default async function TeamView() {
 
     // Solicitando resposta fetch de GET-ALL de base-equipe.
-    const respostaGET = await fetch(`${SERVER_URL}/api/base/base-equipe/GET/0`);
+    const respostaGET = await fetch(`/api/base/base-equipe/GET/0`);
     
     // Transformando a resposta fetch em um json que poderá ser utilizado na página.
     const participantes = await respostaGET.json();

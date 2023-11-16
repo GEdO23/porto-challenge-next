@@ -1,40 +1,44 @@
-// Importando Tags utilizadas na página
+'use client';
+import { useEffect, useState } from 'react';
 import Image from "next/image";
 import Link from "next/link";
-
-// Importando Imagem padrão da bike
 import imgIco from "/public/IconeImagem.svg";
-
-// Importando componentes
 import ButtonAdd from "@/components/Button/Add/ButtonAdd";
 import ButtonEdit from "@/components/Button/Edit/ButtonEdit";
 import ButtonRemove from "@/components/Button/Remove/ButtonRemove";
 
-// Página assincrona de visualização de seguros de bike
-export default async function SegurosView() {
+export default function SegurosView() {
+  const [seguros, setSeguros] = useState([]);
 
-    // Solicitando resposta fetch de GET-ALL de base-contratos.
-    const respostaGET = await fetch("http://localhost:3000/api/base/base-contratos/GET/0");
-    
-    // Transformando a resposta fetch em um json que poderá ser utilizado na página.
-    const seguros = await respostaGET.json();
-
-    // Função para lidar com o cancelamento de contratos
-    const handleDelete = async (id) => {
-        try {
-            // Solicitando a remoção do seguro, cujo ID é o mesmo que o ID chamado na função
-            const respostaDEL = await fetch(`http://localhost:3000/api/base/base-contratos/DELETE/${id}`,
-            {
-                method: "DELETE",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-            }
-        );
-        } catch (error) {
-            console.log(error);
+  useEffect(() => {
+    fetch("http://localhost:3000/api/base/base-contratos/GET/0")
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("Erro ao buscar contratos");
         }
-    };
+        return response.json();
+      })
+      .then(data => setSeguros(data))
+      .catch(error => console.error(error));
+  }, []);
+
+  const handleDelete = async (id) => {
+    try {
+      const response = await fetch(`http://localhost:3000/api/base/base-contratos/DELETE/${id}`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      if (response.ok) {
+        setSeguros(seguros.filter(contrato => contrato.id !== id));
+      } else {
+        throw new Error("Erro ao deletar contrato");
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
     return (
         <main className="segurosview-container">
@@ -42,8 +46,7 @@ export default async function SegurosView() {
             <ul className="segurosview-list">
                 {/* Verificando se há Contratos 
                 Se houver, exibir todos, se não, exibir mensagem */}
-                {await seguros.length > 0 && await seguros? 
-                (await seguros.map((contrato) => (
+                {seguros.length > 0 ? seguros.map((contrato)=> (
                 <li key={contrato.id} className="segurosview-list-item">
                     {/* Dados da Bike */}
                     <div className="segurosview-list-item-dados">
@@ -75,7 +78,7 @@ export default async function SegurosView() {
                     </div>
                 </li>
                 ))
-                ) : (
+                : (
                 <>
                 {/* Mensagem exibida, caso usuário ainda não tenha contratos */}
                 <li className="w-full text-center">Nenhum contrato encontrado em sua conta...</li>

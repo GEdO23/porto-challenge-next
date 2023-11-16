@@ -69,12 +69,17 @@ export default function SegurosView() {
                     <div className="segurosview-list-item-buttons">
                         {/* Caso seja pressionado o botão componente de edição,
                         o usuário será redirecionado para uma página de edição formulário do contrato selecionado */}
-                        <Link href={`http://localhost:3000/seguros/edit/${contrato.id}`}>
-                            <ButtonEdit />
-                        </Link>
+                        <button>
+                            <Link href={`http://localhost:3000/seguros/edit/${contrato.id}`}>
+                                <ButtonEdit />
+                            </Link>
+
+                        </button>
                         {/* Caso seja pressionado o botão componente de remoção,
                         chamar função para lidar com o cancelamento do contrato selecionado */}
-                        <ButtonRemove onClick={() => handleDelete(contrato.id)} />
+                        <button onClick={() => handleDelete(contrato.id)} >
+                            <ButtonRemove/>
+                        </button>
                     </div>
                 </li>
                 ))

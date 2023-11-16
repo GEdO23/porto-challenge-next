@@ -46,6 +46,10 @@
 
         & .segurosview-list-item-buttons {
           @apply flex gap-5;
+
+          & button {
+            @apply flex gap-5;
+          }
         }
       }
 
